@@ -1,16 +1,10 @@
 package cl.dany.flash_firebase_v3;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.view.MotionEvent;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 
 import com.firebase.ui.auth.AuthUI;
-import com.firebase.ui.auth.ResultCodes;
 
 import java.util.Arrays;
 
@@ -46,6 +40,8 @@ public class LoginActivity extends AppCompatActivity {
                                 new AuthUI.IdpConfig.FacebookBuilder().build()/*
                                 new AuthUI.IdpConfig.PhoneBuilder().build(),
                                 new AuthUI.IdpConfig.TwitterBuilder().build()*/))
+                        .setTheme(R.style.LoginTheme)
+                        .setLogo(R.mipmap.logo)
                         .build(),
                 RC_SIGN_IN);
     }
