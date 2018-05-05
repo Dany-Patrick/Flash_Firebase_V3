@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="54dp"
+    android:paddingBottom="16dp"
+    tools:context=".Views.Main.Drawer.DrawerFragment">
+    <com.github.siyamed.shapeimageview.CircularImageView
+
+        android:layout_marginTop="54dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/logo"
+        app:siBorderWidth="2dp"
+        app:siBorderColor="@android:color/white"
+       />
+
+    <TextView
+        android:id="@+id/emailTv"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="user@gmail.com" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/logoutTv"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/white"
+            android:paddingRight="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
