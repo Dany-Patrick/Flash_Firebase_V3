@@ -14,11 +14,14 @@ public class CurrentUser {
         return currentUser;
     }
 
-    public void setCurrentUser(FirebaseUser currentUser) {
-        this.currentUser = currentUser;
-    }
+    public String uid(){return currentUser.getUid();}
+
     public String email()
     {
         return getCurrentUser().getEmail();
+    }
+    public String sanitizedEmail(String email)
+    {
+        return email().replace("@","AT").replace(".","DOT");
     }
 }

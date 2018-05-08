@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cl.dany.flash_firebase_v3">
+    <uses-permission  android:name="android.permission.CAMERA" />
+    <uses-permission  android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission  android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission  android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -23,7 +27,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|keyboardHidden|screenSize"/>
     </application>
 
 </manifest>

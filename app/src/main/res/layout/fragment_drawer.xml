@@ -9,7 +9,7 @@
     android:paddingBottom="16dp"
     tools:context=".Views.Main.Drawer.DrawerFragment">
     <com.github.siyamed.shapeimageview.CircularImageView
-
+        android:id="@+id/avatarCI"
         android:layout_marginTop="54dp"
         android:layout_gravity="center_horizontal"
         android:layout_width="120dp"
