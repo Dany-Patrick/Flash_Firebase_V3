@@ -22,7 +22,7 @@
         <fragment
 
             android:id="@+id/drawerFragment"
-            android:name="cl.dany.flash_firebase_v3.Views.Main.Drawer.DrawerFragment"
+            android:name="cl.dany.flash_firebase_v3.views.main.drawer.DrawerFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 

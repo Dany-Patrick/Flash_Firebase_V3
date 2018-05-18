@@ -1,4 +1,4 @@
-package cl.dany.flash_firebase_v3.Data;
+package cl.dany.flash_firebase_v3.data;
 
 public class LoginVerificator {
     private LoginCallback callBack;

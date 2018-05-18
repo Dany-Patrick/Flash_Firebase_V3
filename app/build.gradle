@@ -26,6 +26,7 @@ dependencies {
     implementation('com.frosquivel:magicalcamera:5.0.5@aar') {
         transitive = false;
     }
+    implementation 'com.github.ybq:Android-SpinKit:1.1.0'
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.firebaseui:firebase-ui-auth:3.3.1'

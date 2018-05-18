@@ -10,6 +10,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import cl.dany.flash_firebase_v3.Data.CurrentUser;
+import cl.dany.flash_firebase_v3.Data.EmailProcesor;
 import cl.dany.flash_firebase_v3.Data.Nodes;
 import cl.dany.flash_firebase_v3.Data.PhotoPreference;
 import cl.dany.flash_firebase_v3.Models.LocalUser;
@@ -23,7 +24,7 @@ public class UploadPhoto {
     public void toFirebase(String path)
     {
         final CurrentUser currentUser = new CurrentUser();
-        String folder = currentUser.sanitizedEmail(currentUser.email()+"/");
+        String folder = new EmailProcesor().sanitizedEmail(currentUser.email()+"/");
         String photoName = "avatar.jpg";
         String baseUrl = "gs://flashfirebasev3.appspot.com/avatars/";
         String refUrl = baseUrl + folder + photoName;
@@ -39,9 +40,9 @@ public class UploadPhoto {
                 user.setName(currentUser.getCurrentUser().getDisplayName());
                 user.setPhoto(url);
                 user.setUid(currentUser.uid());
-                String key = currentUser.sanitizedEmail(currentUser.email());
+                String key = new EmailProcesor().sanitizedEmail(currentUser.email());
                 new Nodes().user(key).setValue(user);
-                FirebaseDatabase.getInstance().getReference("users").child(key).setValue(user);
+               // FirebaseDatabase.getInstance().getReference("users").child(key).setValue(user);
 
             }
         });

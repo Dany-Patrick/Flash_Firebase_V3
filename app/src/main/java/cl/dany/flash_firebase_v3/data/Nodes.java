@@ -1,4 +1,4 @@
-package cl.dany.flash_firebase_v3.Data;
+package cl.dany.flash_firebase_v3.data;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -12,5 +12,13 @@ public class Nodes {
     public DatabaseReference user(String key)
     {
         return users().child(key);
+    }
+    public DatabaseReference chats()
+    {
+        return root.child("chats");
+    }
+    public DatabaseReference userChat(String uid)
+    {
+        return chats().child(uid);
     }
 }

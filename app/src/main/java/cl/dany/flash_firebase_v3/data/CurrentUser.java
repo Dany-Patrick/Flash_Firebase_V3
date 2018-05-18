@@ -1,4 +1,4 @@
-package cl.dany.flash_firebase_v3.Data;
+package cl.dany.flash_firebase_v3.data;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,8 +20,5 @@ public class CurrentUser {
     {
         return getCurrentUser().getEmail();
     }
-    public String sanitizedEmail(String email)
-    {
-        return email().replace("@","AT").replace(".","DOT");
-    }
+
 }
