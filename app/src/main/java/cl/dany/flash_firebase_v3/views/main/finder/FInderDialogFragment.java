@@ -1,4 +1,4 @@
-package cl.dany.flash_firebase_v3.Views.Main.finder;
+package cl.dany.flash_firebase_v3.views.main.finder;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -12,7 +12,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.github.ybq.android.spinkit.SpinKitView;

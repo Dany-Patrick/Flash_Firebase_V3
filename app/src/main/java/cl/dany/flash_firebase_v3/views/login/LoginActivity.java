@@ -1,4 +1,4 @@
-package cl.dany.flash_firebase_v3.Views.Login;
+package cl.dany.flash_firebase_v3.views.login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,10 +8,10 @@ import com.firebase.ui.auth.AuthUI;
 
 import java.util.Arrays;
 
-import cl.dany.flash_firebase_v3.Data.CurrentUser;
-import cl.dany.flash_firebase_v3.Data.LoginCallback;
 import cl.dany.flash_firebase_v3.MainActivity;
 import cl.dany.flash_firebase_v3.R;
+import cl.dany.flash_firebase_v3.data.CurrentUser;
+import cl.dany.flash_firebase_v3.data.LoginCallback;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.

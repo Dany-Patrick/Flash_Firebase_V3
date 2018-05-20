@@ -1,4 +1,4 @@
-package cl.dany.flash_firebase_v3.Views.Main.finder;
+package cl.dany.flash_firebase_v3.views.main.finder;
 
 import android.content.Context;
 
@@ -7,14 +7,12 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
-import org.w3c.dom.Node;
-
-import cl.dany.flash_firebase_v3.Data.CurrentUser;
-import cl.dany.flash_firebase_v3.Data.EmailProcesor;
-import cl.dany.flash_firebase_v3.Data.Nodes;
-import cl.dany.flash_firebase_v3.Data.PhotoPreference;
-import cl.dany.flash_firebase_v3.Models.Chat;
-import cl.dany.flash_firebase_v3.Models.LocalUser;
+import cl.dany.flash_firebase_v3.data.CurrentUser;
+import cl.dany.flash_firebase_v3.data.EmailProcesor;
+import cl.dany.flash_firebase_v3.data.Nodes;
+import cl.dany.flash_firebase_v3.data.PhotoPreference;
+import cl.dany.flash_firebase_v3.models.Chat;
+import cl.dany.flash_firebase_v3.models.LocalUser;
 
 public class UserValidation {
     private FinderCallback callback;

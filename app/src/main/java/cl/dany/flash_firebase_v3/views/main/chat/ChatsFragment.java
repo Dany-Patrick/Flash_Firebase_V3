@@ -1,5 +1,6 @@
-package cl.dany.flash_firebase_v3.Views.Main.chat;
+package cl.dany.flash_firebase_v3.views.main.chat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,14 +11,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import cl.dany.flash_firebase_v3.R;
+import cl.dany.flash_firebase_v3.adapters.ChatsAdapters;
+import cl.dany.flash_firebase_v3.views.chat.ChatActivity;
 
-public class ChatsFragment extends Fragment {
+public class ChatsFragment extends Fragment implements ChatsListener{
 
+    public static final String CHAT_KEY = "cl.dany.flash_firebase_v3.views.main.chat.KEY.CHAT_KEY";
+    public static final String CHAT_RECEIVER = "cl.dany.flash_firebase_v3.views.main.chat.KEY.CHAT_RECEIVER";
 
-    public ChatsFragment() {
+public ChatsFragment() {
         // Required empty public constructor
     }
 
@@ -37,12 +41,21 @@ public class ChatsFragment extends Fragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+
         super.onViewCreated(view, savedInstanceState);
         RecyclerView recyclerView = view.findViewById(R.id.recyclerVW);
-        recyclerView.setHasFixedSize(true);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(),LinearLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
+        ChatsAdapters adapter = new ChatsAdapters( getActivity(),this);
+        recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void clicked(String key, String mail) {
+        Intent intent = new Intent(getActivity(), ChatActivity.class);
+        intent.putExtra(CHAT_KEY, key);
+        intent.putExtra(CHAT_RECEIVER,mail);
+        startActivity(intent);
     }
 }

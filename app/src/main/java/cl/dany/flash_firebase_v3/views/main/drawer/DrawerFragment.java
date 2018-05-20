@@ -1,4 +1,4 @@
-package cl.dany.flash_firebase_v3.Views.Main.Drawer;
+package cl.dany.flash_firebase_v3.views.main.drawer;
 
 import android.Manifest;
 import android.app.Activity;
@@ -24,9 +24,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.squareup.picasso.Picasso;
 
-import cl.dany.flash_firebase_v3.Data.CurrentUser;
 import cl.dany.flash_firebase_v3.R;
-import cl.dany.flash_firebase_v3.Views.Login.LoginActivity;
+import cl.dany.flash_firebase_v3.data.CurrentUser;
+import cl.dany.flash_firebase_v3.views.login.LoginActivity;
 
 
 public class DrawerFragment extends Fragment implements PhotoCallback{

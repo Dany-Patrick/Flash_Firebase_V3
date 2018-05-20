@@ -1,19 +1,18 @@
-package cl.dany.flash_firebase_v3.Views.Main.Drawer;
+package cl.dany.flash_firebase_v3.views.main.drawer;
 
 import android.content.Context;
 import android.net.Uri;
 
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-import cl.dany.flash_firebase_v3.Data.CurrentUser;
-import cl.dany.flash_firebase_v3.Data.EmailProcesor;
-import cl.dany.flash_firebase_v3.Data.Nodes;
-import cl.dany.flash_firebase_v3.Data.PhotoPreference;
-import cl.dany.flash_firebase_v3.Models.LocalUser;
+import cl.dany.flash_firebase_v3.data.CurrentUser;
+import cl.dany.flash_firebase_v3.data.EmailProcesor;
+import cl.dany.flash_firebase_v3.data.Nodes;
+import cl.dany.flash_firebase_v3.data.PhotoPreference;
+import cl.dany.flash_firebase_v3.models.LocalUser;
 
 public class UploadPhoto {
     private Context context;

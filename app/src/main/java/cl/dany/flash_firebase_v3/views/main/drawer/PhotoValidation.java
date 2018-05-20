@@ -1,8 +1,8 @@
-package cl.dany.flash_firebase_v3.Views.Main.Drawer;
+package cl.dany.flash_firebase_v3.views.main.drawer;
 
 import android.content.Context;
 
-import cl.dany.flash_firebase_v3.Data.PhotoPreference;
+import cl.dany.flash_firebase_v3.data.PhotoPreference;
 
 public class PhotoValidation {
     private Context context;
